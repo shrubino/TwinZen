@@ -1,0 +1,240 @@
+[gd_scene load_steps=27 format=3 uid="uid://b3ty2k2smxfdj"]
+
+[ext_resource type="Texture2D" uid="uid://cmd4xjo6pnvna" path="res://Resources/Sprites/bg_sheet.png" id="2_6y7pd"]
+[ext_resource type="Script" uid="uid://5cxyhb7o508a" path="res://Scripts/asteroid_spawner.gd" id="2_pu3va"]
+[ext_resource type="AudioStream" uid="uid://ci66xgtbqnh7r" path="res://Resources/Audio/SpaceMetronome.wav" id="3_0e3vx"]
+[ext_resource type="PackedScene" uid="uid://bteicrao7jpyl" path="res://Scenes/ship.tscn" id="4_6j5ir"]
+[ext_resource type="PackedScene" uid="uid://c1j8on5bp3nlm" path="res://Scenes/monk.tscn" id="5_mgc0q"]
+[ext_resource type="PackedScene" uid="uid://cpqjtrxselwdf" path="res://Scenes/bubble1.tscn" id="6_6y7pd"]
+[ext_resource type="Texture2D" uid="uid://cgrhkox423lcd" path="res://Resources/Sprites/sun.png" id="6_tpqse"]
+[ext_resource type="PackedScene" uid="uid://bm2lhyl675dly" path="res://Scenes/bubble2.tscn" id="7_73nn6"]
+[ext_resource type="PackedScene" uid="uid://dujinn525ybqy" path="res://Scenes/feather.tscn" id="9_73nn6"]
+[ext_resource type="Texture2D" uid="uid://dhcw5e8fq4pi1" path="res://Resources/Sprites/Peacebar.png" id="9_r0mdn"]
+[ext_resource type="FontFile" uid="uid://co38hhrnk8cnd" path="res://Resources/Fonts/Minimal5.ttf" id="10_0xqxu"]
+[ext_resource type="Texture2D" uid="uid://djr83y4ikkbfm" path="res://Resources/Sprites/Hullbar.png" id="11_tpqse"]
+[ext_resource type="PackedScene" uid="uid://bffjq71t503i0" path="res://Scenes/music_controller.tscn" id="13_c78sm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73nn6"]
+atlas = ExtResource("2_6y7pd")
+region = Rect2(0, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0mdn"]
+atlas = ExtResource("2_6y7pd")
+region = Rect2(288, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xqxu"]
+atlas = ExtResource("2_6y7pd")
+region = Rect2(576, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpqse"]
+atlas = ExtResource("2_6y7pd")
+region = Rect2(864, 0, 288, 162)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c78sm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73nn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0mdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xqxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpqse")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve" id="Curve_73nn6"]
+_limits = [-500.0, 500.0, 0.0, 1.0]
+_data = [Vector2(0, -500), 0.0, 0.0, 0, 0, Vector2(1, 500), 1400.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6y7pd"]
+radius = 18.0278
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xqxu"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tpqse"]
+bg_color = Color(0.937255, 0.141176, 0.227451, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_0xqxu"]
+base_font = ExtResource("10_0xqxu")
+spacing_top = -8
+
+[sub_resource type="FontVariation" id="FontVariation_tpqse"]
+base_font = ExtResource("10_0xqxu")
+spacing_top = -7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c78sm"]
+bg_color = Color(0.937255, 0.141176, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i47ox"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+
+[node name="MainGame" type="Node2D"]
+
+[node name="AsteroidSpawner" type="Node2D" parent="."]
+position = Vector2(217, -16)
+script = ExtResource("2_pu3va")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c78sm")
+autoplay = "default"
+frame_progress = 0.673186
+centered = false
+
+[node name="SpaceMetronome" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0e3vx")
+
+[node name="AsteroidBloop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0e3vx")
+pitch_scale = 0.47
+
+[node name="Ship" parent="." instance=ExtResource("4_6j5ir")]
+position = Vector2(219, 74)
+
+[node name="Monk" parent="." instance=ExtResource("5_mgc0q")]
+position = Vector2(75, 126)
+
+[node name="MonkWindEast" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(8, -4)
+spread = 180.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 45.45
+initial_velocity_max = 116.16
+angular_velocity_min = 247.27
+angular_velocity_max = 247.27
+orbit_velocity_min = 0.25
+orbit_velocity_max = 0.4
+color = Color(0.937255, 0.141176, 0.227451, 1)
+
+[node name="MonkWindWest" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(134, -5)
+spread = 180.0
+gravity = Vector2(0, 200)
+initial_velocity_min = 45.45
+initial_velocity_max = 116.16
+angular_velocity_min = 247.27
+angular_velocity_max = 247.27
+orbit_velocity_min = -0.4
+orbit_velocity_max = -0.4
+color = Color(0.937255, 0.141176, 0.227451, 1)
+
+[node name="Sun and Moon" type="Sprite2D" parent="."]
+position = Vector2(143, 74)
+texture = ExtResource("6_tpqse")
+
+[node name="Bubble1" parent="." instance=ExtResource("6_6y7pd")]
+position = Vector2(84, 96)
+
+[node name="Bubble2" parent="." instance=ExtResource("7_73nn6")]
+position = Vector2(88, 78)
+
+[node name="FeatherBubble" parent="." instance=ExtResource("9_73nn6")]
+position = Vector2(73, 45)
+
+[node name="SpaceParticleLeft" type="CPUParticles2D" parent="."]
+position = Vector2(185, -38)
+amount = 5
+lifetime = 0.7
+local_coords = true
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 50.0
+orbit_velocity_curve = SubResource("Curve_73nn6")
+color = Color(1, 0.94902, 0.87451, 1)
+anim_speed_max = 1.0
+
+[node name="SpaceParticleRight" type="CPUParticles2D" parent="."]
+position = Vector2(251, -38)
+amount = 5
+lifetime = 0.7
+local_coords = true
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 50.0
+orbit_velocity_curve = SubResource("Curve_73nn6")
+color = Color(1, 0.94902, 0.87451, 1)
+anim_speed_max = 1.0
+
+[node name="ZenDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZenDetector"]
+position = Vector2(73, 45)
+shape = SubResource("CircleShape2D_6y7pd")
+
+[node name="PeacebarContainer" type="Sprite2D" parent="."]
+position = Vector2(132, 142)
+texture = ExtResource("9_r0mdn")
+
+[node name="Peace Bar" type="ProgressBar" parent="PeacebarContainer"]
+offset_left = -4.0
+offset_top = -13.0
+offset_right = 4.0
+offset_bottom = 14.0
+theme_override_constants/outline_size = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_0xqxu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tpqse")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="PeaceLabel" type="Label" parent="PeacebarContainer"]
+anchors_preset = -1
+anchor_left = -0.5
+anchor_bottom = 2.161
+offset_left = -6.0
+offset_top = -12.0
+offset_right = -6.0
+offset_bottom = -9.83
+size_flags_horizontal = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.937255, 0.141176, 0.227451, 1)
+theme_override_fonts/font = SubResource("FontVariation_0xqxu")
+text = "Peace"
+autowrap_mode = 1
+justification_flags = 0
+visible_characters_behavior = 2
+
+[node name="HullContainer" type="Sprite2D" parent="."]
+position = Vector2(158, 142)
+texture = ExtResource("11_tpqse")
+
+[node name="Hull" type="Label" parent="HullContainer"]
+anchors_preset = -1
+anchor_left = -0.5
+anchor_bottom = 2.161
+offset_left = 12.0
+offset_top = -13.0
+offset_right = 12.0
+offset_bottom = -10.83
+size_flags_horizontal = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0.94902, 0.87451, 1)
+theme_override_fonts/font = SubResource("FontVariation_tpqse")
+text = "HULL"
+autowrap_mode = 1
+justification_flags = 0
+visible_characters_behavior = 2
+
+[node name="Hull Bar" type="ProgressBar" parent="HullContainer"]
+offset_left = -4.0
+offset_top = -14.0
+offset_right = 4.0
+offset_bottom = 14.0
+theme_override_styles/background = SubResource("StyleBoxFlat_c78sm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_i47ox")
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="MusicController" parent="." instance=ExtResource("13_c78sm")]

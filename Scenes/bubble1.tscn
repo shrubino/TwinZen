@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpqjtrxselwdf"]
+
+[ext_resource type="Texture2D" uid="uid://cc7yrewbhcc0" path="res://Resources/Sprites/bubble1.png" id="1_vibvv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vibvv"]
+atlas = ExtResource("1_vibvv")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pra6w"]
+atlas = ExtResource("1_vibvv")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ki32"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vibvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pra6w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Sprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1ki32")
+autoplay = "default"

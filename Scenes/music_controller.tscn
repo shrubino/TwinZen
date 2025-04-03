@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bffjq71t503i0"]
+
+[ext_resource type="Script" uid="uid://cvdrg4bbwdqew" path="res://Scripts/music_controller.gd" id="1_g5yuc"]
+
+[node name="MusicController" type="Node2D"]
+script = ExtResource("1_g5yuc")
+
+[node name="Bass" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Brass" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Drums" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="finished" from="Drums" to="." method="_on_drums_finished"]

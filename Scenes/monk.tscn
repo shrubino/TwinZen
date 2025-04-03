@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1j8on5bp3nlm"]
+
+[ext_resource type="Texture2D" uid="uid://dw5nt0d133ou0" path="res://Resources/Sprites/monk_take2.png" id="1_keeoj"]
+[ext_resource type="Texture2D" uid="uid://blndq3l2ysskj" path="res://Resources/Sprites/monk_disturbed.png" id="2_831lw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_831lw"]
+atlas = ExtResource("1_keeoj")
+region = Rect2(0, 0, 44, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjrfr"]
+atlas = ExtResource("1_keeoj")
+region = Rect2(44, 0, 44, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeelv"]
+atlas = ExtResource("2_831lw")
+region = Rect2(0, 0, 44, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71f2a"]
+atlas = ExtResource("2_831lw")
+region = Rect2(44, 0, 44, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjrfr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_831lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjrfr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eeelv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71f2a")
+}],
+"loop": true,
+"name": &"disturbed",
+"speed": 2.0
+}]
+
+[node name="Monk" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_xjrfr")
+animation = &"disturbed"
+autoplay = "default"

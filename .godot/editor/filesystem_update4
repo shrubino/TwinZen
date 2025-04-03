@@ -1,0 +1,5 @@
+res://beattest/Scenes/main_game.tscn
+res://Scripts/asteroid_spawner.gd
+res://beattest/Scenes/asteroid.tscn
+res://Scenes/main_game.tscn
+res://Scenes/asteroid.tscn
