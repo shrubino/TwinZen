@@ -14,6 +14,8 @@ extends AnimatedSprite2D
 @onready var peace_decrease_rate = 2
 
 @export_category("Metronome stuff")
+@onready var tutorial_timer = 9
+@onready var tutorial_ended = false
 @export var time_for_asteroids = 0.5
 @export var measures = [4]
 @onready var space_metronome = $"../SpaceMetronome"
@@ -35,25 +37,29 @@ extends AnimatedSprite2D
 @onready var west_wind = $"../MonkWindWest"
 
 func _ready():
+	sun.position = sun_positions[sun_index]
+
+	await get_tree().create_timer(tutorial_timer).timeout
+	tutorial_ended = true
 	start_timer()
 	start_peace_timer()
-	sun.position = sun_positions[sun_index]
 	
 func _process(delta):
-	if Input.is_action_pressed("monk_w"):
-		velocity.y -= breath_speed * delta 
-	if Input.is_action_pressed("monk_s"):
-		velocity.y += breath_speed * delta 
-	if Input.is_action_pressed("monk_a"):
-		velocity.x -= breath_speed * delta 
-	if Input.is_action_pressed("monk_d"):
-		velocity.x += breath_speed * delta 
-	velocity.y += gravity * delta
-	position += velocity
-	bubble2.position += velocity/2
-	bubble1.position += velocity/3
-	handle_clamps()
-	handle_wind(delta)
+	if tutorial_ended == true:
+		if Input.is_action_pressed("monk_w"):
+			velocity.y -= breath_speed * delta 
+		if Input.is_action_pressed("monk_s"):
+			velocity.y += breath_speed * delta 
+		if Input.is_action_pressed("monk_a"):
+			velocity.x -= breath_speed * delta 
+		if Input.is_action_pressed("monk_d"):
+			velocity.x += breath_speed * delta 
+		velocity.y += gravity * delta
+		position += velocity
+		bubble2.position += velocity/2
+		bubble1.position += velocity/3
+		handle_clamps()
+		handle_wind(delta)
 	
 func handle_wind(delta):
 	if wind == true:
@@ -79,6 +85,7 @@ func start_peace_timer():
 	if is_at_peace:
 		await get_tree().create_timer(peace_increase_rate).timeout
 		peace_bar.value += 1
+		Globals.score += 10
 	else:
 		await get_tree().create_timer(peace_decrease_rate).timeout
 		peace_bar.value -= 1

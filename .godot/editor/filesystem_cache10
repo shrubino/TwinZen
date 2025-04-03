@@ -1,54 +1,65 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743646440
-::res://beattest/::1743646326
-::res://beattest/Scenes/::1743646466
-asteroid.tscn::PackedScene::197953569453306694::1743646466::0::1::::<><><>0<>0<><>::uid://b8rayuv332bgu::::res://Resources/Sprites/asteroid.png<>uid://dutg427ix82jr::::res://Scripts/asteroid.gd<>uid://cliigfdlfdhin::::res://Resources/Sprites/asteroid2.png<>uid://jsk47sfapq50::::res://Resources/Sprites/asteroid3.png
-bubble1.tscn::PackedScene::5859285378291830363::1743640372::0::1::::<><><>0<>0<><>::uid://cc7yrewbhcc0::::res://Resources/Sprites/bubble1.png
-bubble2.tscn::PackedScene::3285106673192564906::1743640372::0::1::::<><><>0<>0<><>::uid://cptp3y2k6g6qh::::res://Resources/Sprites/bubble2.png
-bubble_3.tscn::PackedScene::939063677224716735::1743548581::0::1::::<><><>0<>0<><>::uid://c6jp637a6tpg4::::res://Resources/Sprites/bubble3.png
-feather.tscn::PackedScene::8582128005304860092::1743645798::0::1::::<><><>0<>0<><>::uid://ub36fsps2v5o::::res://Resources/Sprites/FeatherBubble-9fr.png<>uid://sbwxavdd00f8::::res://Scripts/feather.gd
-main_game.tscn::PackedScene::4392437474924975099::1743646500::0::1::::<><><>0<>0<><>::uid://cmd4xjo6pnvna::::res://Resources/Sprites/bg_sheet.png<>uid://5cxyhb7o508a::::res://Scripts/asteroid_spawner.gd<>uid://ci66xgtbqnh7r::::res://Resources/Audio/SpaceMetronome.wav<>uid://bteicrao7jpyl::::res://beattest/Scenes/ship.tscn<>uid://c1j8on5bp3nlm::::res://beattest/Scenes/monk.tscn<>uid://cpqjtrxselwdf::::res://beattest/Scenes/bubble1.tscn<>uid://cgrhkox423lcd::::res://Resources/Sprites/sun.png<>uid://bm2lhyl675dly::::res://beattest/Scenes/bubble2.tscn<>uid://dujinn525ybqy::::res://beattest/Scenes/feather.tscn<>uid://dhcw5e8fq4pi1::::res://Resources/Sprites/Peacebar.png<>uid://co38hhrnk8cnd::::res://Resources/Fonts/Minimal5.ttf<>uid://djr83y4ikkbfm::::res://Resources/Sprites/Hullbar.png<>uid://bffjq71t503i0::::res://beattest/Scenes/music_controller.tscn
-monk.tscn::PackedScene::6618360092851824678::1743645798::0::1::::<><><>0<>0<><>::uid://dw5nt0d133ou0::::res://Resources/Sprites/monk_take2.png<>uid://blndq3l2ysskj::::res://Resources/Sprites/monk_disturbed.png
-music_controller.tscn::PackedScene::2748263538107436193::1743645798::0::1::::<><><>0<>0<><>::uid://cvdrg4bbwdqew::::res://Scripts/music_controller.gd
-ship.tscn::PackedScene::3728756424938079999::1743639112::0::1::::<><><>0<>0<><>::uid://dylik1fdsbj8a::::res://Resources/Sprites/ship-Sheet.png<>uid://dq2w0vf4y5b4j::::res://Scripts/ship.gd
+::res://::1743705972
+::res://beattest/::1743646500
 ::res://Resources/::1743642871
 ::res://Resources/Audio/::1743646414
-bass_120bpm_no_click_at_start.wav::AudioStreamWAV::6664537495907327553::1743640739::1743646414::1::::<><><>0<>0<>1e7d7ff80b3dda00c6f470b86486d634<>res://.godot/imported/bass_120bpm_no_click_at_start.wav-5395e631c6a6012719dc79eb5cfd7b81.sample::
-bass_130bpm_no_click_at_start.wav::AudioStreamWAV::6609264505972900502::1743640212::1743646414::1::::<><><>0<>0<>1a4e19c109cffda32cbbbee3f4b9f34b<>res://.godot/imported/bass_130bpm_no_click_at_start.wav-73fef71ede298b09b37db3859b6d1e02.sample::
-bass_140bpm_no_click_at_start.wav::AudioStreamWAV::8193596173004142738::1743639895::1743646414::1::::<><><>0<>0<>db94c581c4d7af335f0256db3088c609<>res://.godot/imported/bass_140bpm_no_click_at_start.wav-bb69f66d3da574654ba4a49e575d8eb3.sample::
-brass_120.wav::AudioStreamWAV::7389411188531146590::1743640793::1743646413::1::::<><><>0<>0<>6564792d66286fa20ed19e8938d1665e<>res://.godot/imported/brass_120.wav-3eb44de5ef24d644b2c3c1634fe0786e.sample::
-brass_130bpm 2.wav::AudioStreamWAV::6035443839099742121::1743640260::1743646413::1::::<><><>0<>0<>e08b182d4014a746db67cc03b8c88cbb<>res://.godot/imported/brass_130bpm 2.wav-38924a2dfb53675de09cf7c56f8bdde2.sample::
-brass_140bpm.wav::AudioStreamWAV::3296048280881188841::1743640070::1743646413::1::::<><><>0<>0<>b1d83ba9c678cd5984b3ba5860e6ae42<>res://.godot/imported/brass_140bpm.wav-956006802547923546a668e5ac0c83e8.sample::
-drums_120bpm 2.wav::AudioStreamWAV::4406014309002384669::1743640631::1743646413::1::::<><><>0<>0<>111c59996e7529d178544ce97fda9380<>res://.godot/imported/drums_120bpm 2.wav-55a576221efad0d3b4df269421df09d5.sample::
-drums_130bpm_no_crunch.wav::AudioStreamWAV::8948615766958360212::1743641990::1743646413::1::::<><><>0<>0<>0dca520a3b2eedcf80e2584b7849d192<>res://.godot/imported/drums_130bpm_no_crunch.wav-622bb170e08d546d17f84f0b247327e3.sample::
-drums_140bpm_no_crunch.wav::AudioStreamWAV::3329523512341304569::1743642127::1743646413::1::::<><><>0<>0<>b5fd08d6bfb41a400f61dc78594dc221<>res://.godot/imported/drums_140bpm_no_crunch.wav-ee68a9c5661405e8a96046da9746a672.sample::
-SpaceMetronome.wav::AudioStreamWAV::5400271471460608949::1743465252::1743646413::1::::<><><>0<>0<>c7e3dc34cc61fea8afa64fe3bbf623e3<>res://.godot/imported/SpaceMetronome.wav-836326bda8cfe16801243a3f59b2f4db.sample::
+bass_120bpm_no_click_at_start.wav::AudioStreamWAV/AudioStreamWAV::6664537495907327553::1743640739::1743646414::1::::<><><>0<>0<>1e7d7ff80b3dda00c6f470b86486d634<>res://.godot/imported/bass_120bpm_no_click_at_start.wav-5395e631c6a6012719dc79eb5cfd7b81.sample::
+bass_130bpm_no_click_at_start.wav::AudioStreamWAV/AudioStreamWAV::6609264505972900502::1743640212::1743646414::1::::<><><>0<>0<>1a4e19c109cffda32cbbbee3f4b9f34b<>res://.godot/imported/bass_130bpm_no_click_at_start.wav-73fef71ede298b09b37db3859b6d1e02.sample::
+bass_140bpm_no_click_at_start.wav::AudioStreamWAV/AudioStreamWAV::8193596173004142738::1743639895::1743646414::1::::<><><>0<>0<>db94c581c4d7af335f0256db3088c609<>res://.godot/imported/bass_140bpm_no_click_at_start.wav-bb69f66d3da574654ba4a49e575d8eb3.sample::
+brass_120.wav::AudioStreamWAV/AudioStreamWAV::7389411188531146590::1743640793::1743646413::1::::<><><>0<>0<>6564792d66286fa20ed19e8938d1665e<>res://.godot/imported/brass_120.wav-3eb44de5ef24d644b2c3c1634fe0786e.sample::
+brass_130bpm 2.wav::AudioStreamWAV/AudioStreamWAV::6035443839099742121::1743640260::1743646413::1::::<><><>0<>0<>e08b182d4014a746db67cc03b8c88cbb<>res://.godot/imported/brass_130bpm 2.wav-38924a2dfb53675de09cf7c56f8bdde2.sample::
+brass_140bpm.wav::AudioStreamWAV/AudioStreamWAV::3296048280881188841::1743640070::1743646413::1::::<><><>0<>0<>b1d83ba9c678cd5984b3ba5860e6ae42<>res://.godot/imported/brass_140bpm.wav-956006802547923546a668e5ac0c83e8.sample::
+drums_120bpm 2.wav::AudioStreamWAV/AudioStreamWAV::4406014309002384669::1743640631::1743646413::1::::<><><>0<>0<>111c59996e7529d178544ce97fda9380<>res://.godot/imported/drums_120bpm 2.wav-55a576221efad0d3b4df269421df09d5.sample::
+drums_130bpm_no_crunch.wav::AudioStreamWAV/AudioStreamWAV::8948615766958360212::1743641990::1743646413::1::::<><><>0<>0<>0dca520a3b2eedcf80e2584b7849d192<>res://.godot/imported/drums_130bpm_no_crunch.wav-622bb170e08d546d17f84f0b247327e3.sample::
+drums_140bpm_no_crunch.wav::AudioStreamWAV/AudioStreamWAV::3329523512341304569::1743642127::1743646413::1::::<><><>0<>0<>b5fd08d6bfb41a400f61dc78594dc221<>res://.godot/imported/drums_140bpm_no_crunch.wav-ee68a9c5661405e8a96046da9746a672.sample::
+SpaceMetronome.wav::AudioStreamWAV/AudioStreamWAV::5400271471460608949::1743465252::1743646413::1::::<><><>0<>0<>c7e3dc34cc61fea8afa64fe3bbf623e3<>res://.godot/imported/SpaceMetronome.wav-836326bda8cfe16801243a3f59b2f4db.sample::
 ::res://Resources/Fonts/::1743646413
-Minimal5.ttf::FontFile::5815304311281406541::1743629053::1743646413::1::::<><><>0<>0<>60f7b02c848eef1943f52eb18085676b<>res://.godot/imported/Minimal5.ttf-ae84efad4e5cb98ea59795fc416273e7.fontdata::
-Monocons (1).ttf::FontFile::6721840345923145155::1743628622::1743646413::1::::<><><>0<>0<>78fd5ec7ff5285563fdd99bee55fe25e<>res://.godot/imported/Monocons (1).ttf-ab65f2ad3b3784b18e4365bdb816f279.fontdata::
-::res://Resources/Sprites/::1743646413
-asteroid2.png::CompressedTexture2D::5561930387900359233::1743520561::1743646413::1::::<><><>0<>0<>0feef89fa807b717f0f647a8b593d678<>res://.godot/imported/asteroid2.png-9f4b4876a13d18dcc7adb23294cb4f3d.ctex::
-asteroid3.png::CompressedTexture2D::669519059047744365::1743520746::1743646413::1::::<><><>0<>0<>88935be9cf8c671b93147291526398bf<>res://.godot/imported/asteroid3.png-6e150a270b3bb8ebc7ee2bba609c101a.ctex::
-asteroid.png::CompressedTexture2D::4737790888839470908::1743518430::1743646413::1::::<><><>0<>0<>46a8a8f4fd8def740c7ebea6a228d53c<>res://.godot/imported/asteroid.png-e51b5e80c377b22ed1d4f16bf5b8201e.ctex::
-background.png::CompressedTexture2D::6923781335398112885::1743462535::1743646413::1::::<><><>0<>0<>216479f342663ef1c28df8dc7d2e9f7c<>res://.godot/imported/background.png-6892bd67dbb9f9dc3debcba25bee86c6.ctex::
-bg_sheet.png::CompressedTexture2D::5623102986121302086::1743631701::1743646413::1::::<><><>0<>0<>7699a5a2b1fb69b5a7974c1b1941c1b8<>res://.godot/imported/bg_sheet.png-eeaf4858b4762b09d87549d898b6b354.ctex::
-bubble1.png::CompressedTexture2D::2052066801811759980::1743613749::1743646413::1::::<><><>0<>0<>ab126974975d41992fcfd4deebaec7dc<>res://.godot/imported/bubble1.png-8a410429adde1ef74554e30e409b56bf.ctex::
-bubble2.png::CompressedTexture2D::5431186669703529741::1743613549::1743646413::1::::<><><>0<>0<>6a1d452752fdaa79cca5f3470f236035<>res://.godot/imported/bubble2.png-0f64725e71832078f6e41b7b5f1f5c5f.ctex::
-bubble3.png::CompressedTexture2D::1325827997451149445::1743469427::1743646413::1::::<><><>0<>0<>cc260611e801bff8ca31e9243a51a28c<>res://.godot/imported/bubble3.png-f331ceee1e2220fb9f5911c9328a3b1d.ctex::
-bubble4.png::CompressedTexture2D::3194722795114843537::1743548357::1743646413::1::::<><><>0<>0<>95574ac14ce0b6967d85836b5f236d41<>res://.godot/imported/bubble4.png-9d351228170e70ebb31c0fada4e84002.ctex::
-FeatherBubble-9fr.png::CompressedTexture2D::1407596977053122358::1743614955::1743646413::1::::<><><>0<>0<>b4d7012940fb18accdf954fe504bfcac<>res://.godot/imported/FeatherBubble-9fr.png-2e82498478d967f14d050462e2440296.ctex::
-Feathertake1-9frames.png::CompressedTexture2D::1140928398640421284::1743480034::1743646413::1::::<><><>0<>0<>858d5c417d95c62c5f1e2622bf119916<>res://.godot/imported/Feathertake1-9frames.png-d1697d717c7f28483df21db805e6e737.ctex::
-Hullbar.png::CompressedTexture2D::7828111034368213866::1743629456::1743646413::1::::<><><>0<>0<>f4ecad5d51362d3d4159abbd1b26a73f<>res://.godot/imported/Hullbar.png-57bf16047d82cef09d50d3b889f7d301.ctex::
-monk_disturbed.png::CompressedTexture2D::3185547087101221845::1743642568::1743646413::1::::<><><>0<>0<>4cfd18bc301c9f071f709d7fa609cb2a<>res://.godot/imported/monk_disturbed.png-9d916499eac43b3296a547e680339fe3.ctex::
-monk_take2.png::CompressedTexture2D::8766172513665988633::1743618645::1743646413::1::::<><><>0<>0<>e681dd377f1e3602e731d46dd8641a86<>res://.godot/imported/monk_take2.png-3d02d4003868aae93be935c8cda5965f.ctex::
-moon.png::CompressedTexture2D::4652116755730261449::1743637872::1743646413::1::::<><><>0<>0<>df388df70add38b6f9a9e3a93fbea411<>res://.godot/imported/moon.png-09b31785c38d3735a87fc5e33ad43185.ctex::
-Peacebar.png::CompressedTexture2D::7656102321033320750::1743627884::1743646413::1::::<><><>0<>0<>d1a6cf9e3aa54a38df092ac2951d67dd<>res://.godot/imported/Peacebar.png-a315f75ad9570838b6871cda4bd287b3.ctex::
-ship-Sheet.png::CompressedTexture2D::2319980960772983242::1743466198::1743646413::1::::<><><>0<>0<>da0aa3300dfa2f691efa691f97a5820a<>res://.godot/imported/ship-Sheet.png-faa50f3403cce6e03464c5cb400e7dee.ctex::
-sun.png::CompressedTexture2D::5229512500134052067::1743635030::1743646413::1::::<><><>0<>0<>073b77bd5da3e028c368f069fbd1b8c5<>res://.godot/imported/sun.png-f71e94c6d3fd1d64322be1d13d48d868.ctex::
-::res://Scripts/::1743646465
-asteroid.gd::GDScript::8602679659106670247::1743630207::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-asteroid_spawner.gd::GDScript::2111233785218544086::1743646465::0::1::::<>Node2D<><>0<>0<><>::
-bubble_2.gd::GDScript::1798313229922727052::1743548695::0::1::::<>Sprite2D<><>0<>0<><>::
-feather.gd::GDScript::1266840442921537223::1743642656::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
-music_controller.gd::GDScript::4620651163530816389::1743642502::0::1::::<>Node2D<><>0<>0<><>::
-ship.gd::GDScript::8339403279401175607::1743632604::0::1::::<>Node2D<><>0<>0<><>::
+Minimal5.ttf::FontFile/FontFile::5815304311281406541::1743629053::1743646413::1::::<><><>0<>0<>60f7b02c848eef1943f52eb18085676b<>res://.godot/imported/Minimal5.ttf-ae84efad4e5cb98ea59795fc416273e7.fontdata::
+Monocons (1).ttf::FontFile/FontFile::6721840345923145155::1743628622::1743646413::1::::<><><>0<>0<>78fd5ec7ff5285563fdd99bee55fe25e<>res://.godot/imported/Monocons (1).ttf-ab65f2ad3b3784b18e4365bdb816f279.fontdata::
+::res://Resources/Sprites/::1743708117
+asteroid2.png::CompressedTexture2D/CompressedTexture2D::5561930387900359233::1743520561::1743646413::1::::<><><>0<>0<>0feef89fa807b717f0f647a8b593d678<>res://.godot/imported/asteroid2.png-9f4b4876a13d18dcc7adb23294cb4f3d.ctex::
+asteroid3.png::CompressedTexture2D/CompressedTexture2D::669519059047744365::1743520746::1743646413::1::::<><><>0<>0<>88935be9cf8c671b93147291526398bf<>res://.godot/imported/asteroid3.png-6e150a270b3bb8ebc7ee2bba609c101a.ctex::
+asteroid.png::CompressedTexture2D/CompressedTexture2D::4737790888839470908::1743518430::1743646413::1::::<><><>0<>0<>46a8a8f4fd8def740c7ebea6a228d53c<>res://.godot/imported/asteroid.png-e51b5e80c377b22ed1d4f16bf5b8201e.ctex::
+background.png::CompressedTexture2D/CompressedTexture2D::6923781335398112885::1743462535::1743646413::1::::<><><>0<>0<>216479f342663ef1c28df8dc7d2e9f7c<>res://.godot/imported/background.png-6892bd67dbb9f9dc3debcba25bee86c6.ctex::
+bg_sheet.png::CompressedTexture2D/CompressedTexture2D::5623102986121302086::1743631701::1743646413::1::::<><><>0<>0<>7699a5a2b1fb69b5a7974c1b1941c1b8<>res://.godot/imported/bg_sheet.png-eeaf4858b4762b09d87549d898b6b354.ctex::
+bubble1.png::CompressedTexture2D/CompressedTexture2D::2052066801811759980::1743613749::1743646413::1::::<><><>0<>0<>ab126974975d41992fcfd4deebaec7dc<>res://.godot/imported/bubble1.png-8a410429adde1ef74554e30e409b56bf.ctex::
+bubble2.png::CompressedTexture2D/CompressedTexture2D::5431186669703529741::1743613549::1743646413::1::::<><><>0<>0<>6a1d452752fdaa79cca5f3470f236035<>res://.godot/imported/bubble2.png-0f64725e71832078f6e41b7b5f1f5c5f.ctex::
+bubble3.png::CompressedTexture2D/CompressedTexture2D::1325827997451149445::1743469427::1743646413::1::::<><><>0<>0<>cc260611e801bff8ca31e9243a51a28c<>res://.godot/imported/bubble3.png-f331ceee1e2220fb9f5911c9328a3b1d.ctex::
+bubble4.png::CompressedTexture2D/CompressedTexture2D::3194722795114843537::1743548357::1743646413::1::::<><><>0<>0<>95574ac14ce0b6967d85836b5f236d41<>res://.godot/imported/bubble4.png-9d351228170e70ebb31c0fada4e84002.ctex::
+FeatherBubble-9fr.png::CompressedTexture2D/CompressedTexture2D::1407596977053122358::1743614955::1743646413::1::::<><><>0<>0<>b4d7012940fb18accdf954fe504bfcac<>res://.godot/imported/FeatherBubble-9fr.png-2e82498478d967f14d050462e2440296.ctex::
+Feathertake1-9frames.png::CompressedTexture2D/CompressedTexture2D::1140928398640421284::1743480034::1743646413::1::::<><><>0<>0<>858d5c417d95c62c5f1e2622bf119916<>res://.godot/imported/Feathertake1-9frames.png-d1697d717c7f28483df21db805e6e737.ctex::
+Hullbar.png::CompressedTexture2D/CompressedTexture2D::7828111034368213866::1743629456::1743646413::1::::<><><>0<>0<>f4ecad5d51362d3d4159abbd1b26a73f<>res://.godot/imported/Hullbar.png-57bf16047d82cef09d50d3b889f7d301.ctex::
+left_tutorial.png::CompressedTexture2D/CompressedTexture2D::1472645194825884287::1743705888::1743705893::1::::<><><>0<>0<>e3dbd8b93a7a2da43a478fc6f3f24e79<>res://.godot/imported/left_tutorial.png-2ca54d3ed99eb086d5b7e785aa512334.ctex::
+monk_disturbed.png::CompressedTexture2D/CompressedTexture2D::3185547087101221845::1743642568::1743646413::1::::<><><>0<>0<>4cfd18bc301c9f071f709d7fa609cb2a<>res://.godot/imported/monk_disturbed.png-9d916499eac43b3296a547e680339fe3.ctex::
+monk_take2.png::CompressedTexture2D/CompressedTexture2D::8766172513665988633::1743618645::1743646413::1::::<><><>0<>0<>e681dd377f1e3602e731d46dd8641a86<>res://.godot/imported/monk_take2.png-3d02d4003868aae93be935c8cda5965f.ctex::
+moon.png::CompressedTexture2D/CompressedTexture2D::4652116755730261449::1743637872::1743646413::1::::<><><>0<>0<>df388df70add38b6f9a9e3a93fbea411<>res://.godot/imported/moon.png-09b31785c38d3735a87fc5e33ad43185.ctex::
+Peacebar.png::CompressedTexture2D/CompressedTexture2D::7656102321033320750::1743627884::1743646413::1::::<><><>0<>0<>d1a6cf9e3aa54a38df092ac2951d67dd<>res://.godot/imported/Peacebar.png-a315f75ad9570838b6871cda4bd287b3.ctex::
+right_tutorial.png::CompressedTexture2D::9189525326487309302::1743708111::1743708117::1::::<><><>0<>0<>6748245b62ee3dec241ac956e0f37224<>res://.godot/imported/right_tutorial.png-f0015fe9d4cdc4024d98359fffc99657.ctex::
+ship-Sheet.png::CompressedTexture2D/CompressedTexture2D::2319980960772983242::1743466198::1743646413::1::::<><><>0<>0<>da0aa3300dfa2f691efa691f97a5820a<>res://.godot/imported/ship-Sheet.png-faa50f3403cce6e03464c5cb400e7dee.ctex::
+sun.png::CompressedTexture2D/CompressedTexture2D::5229512500134052067::1743635030::1743646413::1::::<><><>0<>0<>073b77bd5da3e028c368f069fbd1b8c5<>res://.godot/imported/sun.png-f71e94c6d3fd1d64322be1d13d48d868.ctex::
+::res://Rhythm Notifier/::1729017407
+::res://Rhythm Notifier/addons/::1729017407
+::res://Rhythm Notifier/addons/rhythm_notifier/::1743696822
+icon.svg::CompressedTexture2D/CompressedTexture2D::915565551177489870::1729017407::1743696822::1::::<><><>0<>0<>2173e0a1e384ff8208327e67d7cc8041<>res://.godot/imported/icon.svg-dcaeb1230f82723ca07b9f7cd136b8ae.ctex::
+rhythm_notifier.gd::GDScript/GDScript::5435141980085853501::1729017407::0::1::::RhythmNotifier<>Node<><>0<>1<><>::
+::res://Scenes/::1743708280
+asteroid.tscn::PackedScene::197953569453306694::1743708280::0::1::::<><><>0<>0<><>::uid://b8rayuv332bgu::::res://Resources/Sprites/asteroid.png<>uid://cliigfdlfdhin::::res://Resources/Sprites/asteroid2.png<>uid://jsk47sfapq50::::res://Resources/Sprites/asteroid3.png<>uid://dutg427ix82jr::::res://Scripts/asteroid.gd
+bubble1.tscn::PackedScene/PackedScene::5859285378291830363::1743640372::0::1::::<><><>0<>0<><>::uid://cc7yrewbhcc0::::res://Resources/Sprites/bubble1.png
+bubble2.tscn::PackedScene/PackedScene::3285106673192564906::1743640372::0::1::::<><><>0<>0<><>::uid://cptp3y2k6g6qh::::res://Resources/Sprites/bubble2.png
+bubble_3.tscn::PackedScene/PackedScene::939063677224716735::1743548581::0::1::::<><><>0<>0<><>::uid://c6jp637a6tpg4::::res://Resources/Sprites/bubble3.png
+feather.tscn::PackedScene/PackedScene::8582128005304860092::1743645798::0::1::::<><><>0<>0<><>::uid://ub36fsps2v5o::::res://Resources/Sprites/FeatherBubble-9fr.png<>uid://sbwxavdd00f8::::res://Scripts/feather.gd
+main_game.tscn::PackedScene::4392437474924975099::1743708333::0::1::::<><><>0<>0<><>::uid://cmd4xjo6pnvna::::res://Resources/Sprites/bg_sheet.png<>uid://5cxyhb7o508a::::res://Scripts/asteroid_spawner.gd<>uid://ci66xgtbqnh7r::::res://Resources/Audio/SpaceMetronome.wav<>uid://bteicrao7jpyl::::res://Scenes/ship.tscn<>uid://c1j8on5bp3nlm::::res://Scenes/monk.tscn<>uid://cpqjtrxselwdf::::res://Scenes/bubble1.tscn<>uid://cgrhkox423lcd::::res://Resources/Sprites/sun.png<>uid://bm2lhyl675dly::::res://Scenes/bubble2.tscn<>uid://dujinn525ybqy::::res://Scenes/feather.tscn<>uid://dhcw5e8fq4pi1::::res://Resources/Sprites/Peacebar.png<>uid://co38hhrnk8cnd::::res://Resources/Fonts/Minimal5.ttf<>uid://djr83y4ikkbfm::::res://Resources/Sprites/Hullbar.png<>uid://bffjq71t503i0::::res://Scenes/music_controller.tscn<>uid://b3oklirbreml8::::res://Scripts/score_counter.gd<>uid://cjo282pccw8on::::res://Rhythm Notifier/addons/rhythm_notifier/rhythm_notifier.gd<>uid://u8misnjd38w6::::res://Resources/Sprites/left_tutorial.png<>uid://dtsxojfbxb1b7::::res://Scenes/left_tutorial.gd<>uid://d36qe0jywnigc::::res://Resources/Sprites/right_tutorial.png<>uid://dskh040114smy::::res://Scripts/right_tutorial.gd
+monk.tscn::PackedScene/PackedScene::6618360092851824678::1743645798::0::1::::<><><>0<>0<><>::uid://dw5nt0d133ou0::::res://Resources/Sprites/monk_take2.png<>uid://blndq3l2ysskj::::res://Resources/Sprites/monk_disturbed.png
+music_controller.tscn::PackedScene::2748263538107436193::1743708280::0::1::::<><><>0<>0<><>::uid://b63jpjyg7swr2::::res://Scripts/music_controller.gd
+left_tutorial.gd::GDScript::8531430852233705602::1743706339::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+ship.tscn::PackedScene/PackedScene::3728756424938079999::1743639112::0::1::::<><><>0<>0<><>::uid://dylik1fdsbj8a::::res://Resources/Sprites/ship-Sheet.png<>uid://dq2w0vf4y5b4j::::res://Scripts/ship.gd
+::res://Scripts/::1743708278
+asteroid.gd::GDScript::8602679659106670247::1743708212::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+asteroid_spawner.gd::GDScript::2111233785218544086::1743708278::0::1::::<>Node2D<><>0<>0<><>::
+bubble_2.gd::GDScript/GDScript::1798313229922727052::1743548695::0::1::::<>Sprite2D<><>0<>0<><>::
+feather.gd::GDScript::1266840442921537223::1743707097::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+globals.gd::GDScript::7264587357186797824::1743704400::0::1::::<>Node<><>0<>0<><>::
+music_controller.gd::GDScript/GDScript::4620651163530816389::1743642502::0::1::::<>Node2D<><>0<>0<><>::
+right_tutorial.gd::GDScript::8443776240915962880::1743708330::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+score_counter.gd::GDScript::4381236854292264023::1743704446::0::1::::<>Label<><>0<>0<><>::
+ship.gd::GDScript/GDScript::8339403279401175607::1743632604::0::1::::<>Node2D<><>0<>0<><>::

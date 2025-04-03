@@ -17,6 +17,7 @@ func _process(delta):
 	position.y += speed * delta
 	if position.y >= 200:
 		queue_free()
+		Globals.score += 10
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

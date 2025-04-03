@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bffjq71t503i0"]
 
-[ext_resource type="Script" uid="uid://cvdrg4bbwdqew" path="res://Scripts/music_controller.gd" id="1_g5yuc"]
+[ext_resource type="Script" uid="uid://b63jpjyg7swr2" path="res://Scripts/music_controller.gd" id="1_g5yuc"]
 
 [node name="MusicController" type="Node2D"]
 script = ExtResource("1_g5yuc")
