@@ -4,6 +4,8 @@ var center_position: float
 var left_position: float
 var right_position: float
 var target_position: float
+var forward_position: float
+var backward_position: float
 var lerp_speed: float = 5.0
 var return_delay: float = 0.4
 var timer: float = 0.0
@@ -45,3 +47,9 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	hull_bar.value -= 10
+	if hull_bar.value <= 0:
+		its_all_over()
+	
+
+func its_all_over():
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/failure_screen.tscn")

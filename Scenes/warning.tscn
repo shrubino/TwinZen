@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bicggxo3vy2y2"]
+[gd_scene load_steps=3 format=3 uid="uid://bicggxo3vy2y2"]
 
 [ext_resource type="Texture2D" uid="uid://n8kp03uhclwq" path="res://Resources/Sprites/warning.png" id="1_osvl0"]
+[ext_resource type="Script" uid="uid://bdu8rbwb4sbv1" path="res://Scripts/warning.gd" id="2_k7nv6"]
 
 [node name="Warning" type="Sprite2D"]
 texture = ExtResource("1_osvl0")
+script = ExtResource("2_k7nv6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

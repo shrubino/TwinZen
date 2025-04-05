@@ -1,0 +1,76 @@
+[gd_scene load_steps=13 format=3 uid="uid://dhx2qwwueuvxu"]
+
+[ext_resource type="Texture2D" uid="uid://c3t5ei2t46h8v" path="res://Resources/Sprites/failure_screen.png" id="1_fy6mj"]
+[ext_resource type="Script" uid="uid://yomuo86dcd05" path="res://Scripts/failure_screen.gd" id="2_4wx8m"]
+[ext_resource type="Texture2D" uid="uid://q75um6tqswka" path="res://Resources/Sprites/restart_button.png" id="2_fm5f2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm5f2"]
+atlas = ExtResource("1_fy6mj")
+region = Rect2(0, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wx8m"]
+atlas = ExtResource("1_fy6mj")
+region = Rect2(288, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qyev"]
+atlas = ExtResource("1_fy6mj")
+region = Rect2(576, 0, 288, 162)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rox4y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm5f2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wx8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qyev")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qyev"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rox4y"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fm5f2"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtiup"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wx8m"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[node name="Failure Screen" type="AnimatedSprite2D"]
+position = Vector2(144, 82)
+sprite_frames = SubResource("SpriteFrames_rox4y")
+autoplay = "default"
+script = ExtResource("2_4wx8m")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = -22.0
+offset_top = -1.0
+offset_right = 30.0
+offset_bottom = 16.0
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_7qyev")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rox4y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fm5f2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gtiup")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4wx8m")
+icon = ExtResource("2_fm5f2")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

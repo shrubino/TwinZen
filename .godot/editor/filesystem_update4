@@ -1,15 +1,7 @@
 res://Scenes/main_game.tscn
-res://Scenes/asteroid.tscn
-res://Scenes/music_controller.tscn
-res://Scripts/asteroid_spawner.gd
-res://Scenes/left_tutorial.gd
-res://Scripts/feather.gd
-res://Scripts/asteroid.gd
-res://Scripts/right_tutorial.gd
-res://Scenes/left_tutorial.tscn
-res://Scripts/left_tutorial.gd
 res://Scripts/ship.gd
-res://Scripts/music_controller.gd
 res://Scenes/rhythm_notifier.tscn
-res://Rhythm Notifier/addons/rhythm_notifier/rhythm_notifier.gd
 res://Scenes/warning.tscn
+res://Scenes/right_tutorial.tscn
+res://Scenes/failure_screen.tscn
+res://Scripts/failure_screen.gd
