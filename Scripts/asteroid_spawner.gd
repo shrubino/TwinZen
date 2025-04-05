@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var asteroid = preload("res://Scenes/asteroid.tscn")
+@onready var warning = preload("res://Scenes/warning.tscn")
 @onready var space_metronome = $"../SpaceMetronome"
 @onready var asteroid_bloop = $"../AsteroidBloop"
 @export var time_for_asteroids = 0.5

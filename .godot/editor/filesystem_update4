@@ -6,3 +6,10 @@ res://Scenes/left_tutorial.gd
 res://Scripts/feather.gd
 res://Scripts/asteroid.gd
 res://Scripts/right_tutorial.gd
+res://Scenes/left_tutorial.tscn
+res://Scripts/left_tutorial.gd
+res://Scripts/ship.gd
+res://Scripts/music_controller.gd
+res://Scenes/rhythm_notifier.tscn
+res://Rhythm Notifier/addons/rhythm_notifier/rhythm_notifier.gd
+res://Scenes/warning.tscn

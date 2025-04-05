@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://0oy6u6rlyg70"]
+
+[ext_resource type="Script" uid="uid://cjo282pccw8on" path="res://Rhythm Notifier/addons/rhythm_notifier/rhythm_notifier.gd" id="1_4m0pl"]
+[ext_resource type="AudioStream" uid="uid://b31koag8vf414" path="res://Resources/Audio/drums_120bpm 2.wav" id="2_bj8fp"]
+
+[node name="RhythmNotifier" type="Node"]
+script = ExtResource("1_4m0pl")
+running = true
+metadata/_custom_type_script = "uid://cjo282pccw8on"
+
+[node name="Drums" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_bj8fp")
+
+[node name="Brass" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Bass" type="AudioStreamPlayer2D" parent="."]

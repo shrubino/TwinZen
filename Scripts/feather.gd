@@ -22,9 +22,9 @@ extends AnimatedSprite2D
 @onready var asteroid_bloop = $"../AsteroidBloop"
 
 @export_category("Sun and Moon ")
-@onready var sun = $"../Sun and Moon"
+@onready var sun = $"../Sun and Moon" #CURRENTLY DISABLED, BUT LEFT IN FOR WIND CALCULATION PURPOSES
 @onready var sun_positions = [Vector2(0, 82.0), Vector2(32.0, 52.0),Vector2(72.0, 33.0), Vector2(114, 58), Vector2(144, 82)]
-@onready var sun_index = 0
+@onready var sun_index = 0 
 @onready var is_moon = false
 @onready var sun_sprite = preload("res://Resources/Sprites/sun.png")
 @onready var moon_sprite = preload("res://Resources/Sprites/moon.png")

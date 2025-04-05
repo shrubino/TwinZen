@@ -1,3 +1,6 @@
+Sprite2D
+AudioStreamPlayer2D
+AudioListener2D
 AnimatedSprite2D
 Label
 RhythmNotifier

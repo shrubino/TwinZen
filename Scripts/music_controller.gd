@@ -19,7 +19,7 @@ extends Node2D
 
 func _ready():
 	drums_player.stream = drums120
-	drums_player.play()
+	#drums_player.play()
 	
 
 func _on_drums_finished() -> void:

@@ -8,6 +8,7 @@ var lerp_speed: float = 5.0
 var return_delay: float = 0.4
 var timer: float = 0.0
 var is_moving: bool = false
+
 @onready var hull_bar = $"../HullContainer/Hull Bar"
 
 func _ready() -> void:
@@ -22,7 +23,6 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var x_input = Input.get_axis("ship_left", "ship_right")
 	
-	# Handle input only if we're not already moving
 	if !is_moving:
 		if x_input < 0:  # Left pressed
 			target_position = left_position

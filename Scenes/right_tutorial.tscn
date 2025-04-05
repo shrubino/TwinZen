@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://2w6fvrq75qqb"]
+
+[ext_resource type="Texture2D" uid="uid://d36qe0jywnigc" path="res://Resources/Sprites/right_tutorial.png" id="1_3flfd"]
+[ext_resource type="Script" uid="uid://dskh040114smy" path="res://Scripts/right_tutorial.gd" id="2_37yfi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58qbg"]
+atlas = ExtResource("1_3flfd")
+region = Rect2(0, 0, 144, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnsnf"]
+atlas = ExtResource("1_3flfd")
+region = Rect2(144, 0, 144, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06qyo"]
+atlas = ExtResource("1_3flfd")
+region = Rect2(288, 0, 144, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bgrf"]
+atlas = ExtResource("1_3flfd")
+region = Rect2(432, 0, 144, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt8ts"]
+atlas = ExtResource("1_3flfd")
+region = Rect2(576, 0, 144, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbjgr"]
+atlas = ExtResource("1_3flfd")
+region = Rect2(720, 0, 144, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbexl"]
+atlas = ExtResource("1_3flfd")
+region = Rect2(864, 0, 144, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgmg2"]
+atlas = ExtResource("1_3flfd")
+region = Rect2(1008, 0, 144, 162)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6spl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58qbg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnsnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06qyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bgrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt8ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbjgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbexl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgmg2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="RightTutorial" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_g6spl")
+script = ExtResource("2_37yfi")
+
+[connection signal="animation_looped" from="." to="." method="_on_animation_looped"]

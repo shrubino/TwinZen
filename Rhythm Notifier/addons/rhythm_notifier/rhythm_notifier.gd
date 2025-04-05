@@ -14,12 +14,12 @@ extends Node
 ##
 ## [br][br][b]Usage example:[/b]
 ## [codeblock]
-## @onready var r: RhythmNotifier = $RhythmNotifier  # Set bpm and audio_stream_player in inspector
+@onready var r: RhythmNotifier = $"."  # Set bpm and audio_stream_player in inspector
 ##
 ## # Play music and emit lots of signals
-## func _play_some_music():
-##     # Print on beat 4, 8, 12...
-##     r.beats(4).connect(func(count): print("Hello from beat %d!" % (count * 4)))
+func _play_some_music():
+	 ## Print on beat 4, 8, 12...
+	r.beats(4).connect(func(count): print("Hello from beat %d!" % (count * 4)))
 ##
 ##     # Print on beat 5, 8, 11...
 ##     r.beats(3, true, 2).connect(func(count): print("Hello from beat %d!" % 2+(count * 3)))
@@ -27,7 +27,7 @@ extends Node
 ##     # Print anytime beat 8.5 is reached
 ##     r.beats(8.5, false).connect(func(_i): print("Hello from beat eight and a half!"))
 ##
-##     r.audio_stream_player.play()  # Start signaling
+	r.audio_stream_player.play()  # Start signaling
 ##     r.audio_stream_player.seek(1.5)  # pausing/stopping/seeking all supported
 ##
 ##     # Stop playback on beat 20
@@ -171,7 +171,8 @@ signal beat(current_beat: int)
 ## Optional [AudioStreamPlayer] to synchronize signals with.  While [member audio_stream_player] is
 ## playing, [signal beat] and [method beats] signals will be emitted based on playback position.
 ## [br][br]See [member running] for emitting signals without an [AudioStreamPlayer].
-@export var audio_stream_player: AudioStreamPlayer
+@export var audio_stream_player: AudioStreamPlayer2D
+
 
 ## If [code]true[/code], [signal beat] and [method beats] signals are being emitted.  Can be set to
 ## [code]true[/code] to emit signals without playing a stream.  [member running] is always
