@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1jlkdumg2453"
+path="res://.godot/imported/ship_dodge 120.wav-c9702bc5af042182759a3097ad166c37.sample"
+
+[deps]
+
+source_file="res://Resources/Audio/ship_dodge 120.wav"
+dest_files=["res://.godot/imported/ship_dodge 120.wav-c9702bc5af042182759a3097ad166c37.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

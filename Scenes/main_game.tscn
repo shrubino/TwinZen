@@ -14,10 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://djr83y4ikkbfm" path="res://Resources/Sprites/Hullbar.png" id="11_tpqse"]
 [ext_resource type="PackedScene" uid="uid://bffjq71t503i0" path="res://Scenes/music_controller.tscn" id="13_c78sm"]
 [ext_resource type="Script" uid="uid://b3oklirbreml8" path="res://Scripts/score_counter.gd" id="13_sftma"]
-[ext_resource type="PackedScene" uid="uid://0oy6u6rlyg70" path="res://Scenes/rhythm_notifier.tscn" id="15_vc13p"]
-[ext_resource type="AudioStream" uid="uid://b31koag8vf414" path="res://Resources/Audio/drums_120bpm 2.wav" id="16_gpk8t"]
 [ext_resource type="PackedScene" uid="uid://baljdbkwvecr0" path="res://Scenes/left_tutorial.tscn" id="16_vc13p"]
 [ext_resource type="PackedScene" uid="uid://2w6fvrq75qqb" path="res://Scenes/right_tutorial.tscn" id="17_gpk8t"]
+[ext_resource type="Texture2D" uid="uid://dpnugfx2dtj2d" path="res://Resources/Sprites/peace_safety.png" id="19_hm1wn"]
+[ext_resource type="PackedScene" uid="uid://b0vcaq288hohb" path="res://Scenes/progress_bar.tscn" id="20_ry2jr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73nn6"]
 atlas = ExtResource("2_6y7pd")
@@ -106,7 +106,7 @@ stream = ExtResource("3_0e3vx")
 pitch_scale = 0.47
 
 [node name="Ship" parent="." instance=ExtResource("4_6j5ir")]
-position = Vector2(219, 77)
+position = Vector2(217, 89)
 
 [node name="Monk" parent="." instance=ExtResource("5_mgc0q")]
 position = Vector2(75, 126)
@@ -193,7 +193,7 @@ offset_bottom = 14.0
 theme_override_constants/outline_size = 1
 theme_override_styles/background = SubResource("StyleBoxFlat_0xqxu")
 theme_override_styles/fill = SubResource("StyleBoxFlat_tpqse")
-value = 50.0
+value = 60.0
 fill_mode = 3
 show_percentage = false
 
@@ -267,14 +267,18 @@ script = ExtResource("13_sftma")
 
 [node name="MusicController" parent="." instance=ExtResource("13_c78sm")]
 
-[node name="RhythmNotifier" parent="." node_paths=PackedStringArray("audio_stream_player") instance=ExtResource("15_vc13p")]
-audio_stream_player = NodePath("Drums2")
-
-[node name="Drums2" type="AudioStreamPlayer2D" parent="RhythmNotifier"]
-stream = ExtResource("16_gpk8t")
-
 [node name="LeftTutorial" parent="." instance=ExtResource("16_vc13p")]
+visible = false
 position = Vector2(72, 81)
 
 [node name="RightTutorial" parent="." instance=ExtResource("17_gpk8t")]
+visible = false
 position = Vector2(216, 81)
+
+[node name="PeaceSafety" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(74, 18)
+texture = ExtResource("19_hm1wn")
+
+[node name="Progress bar" parent="." instance=ExtResource("20_ry2jr")]
+position = Vector2(144, 9)

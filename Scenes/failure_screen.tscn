@@ -1,8 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhx2qwwueuvxu"]
+[gd_scene load_steps=17 format=3 uid="uid://dhx2qwwueuvxu"]
 
 [ext_resource type="Texture2D" uid="uid://c3t5ei2t46h8v" path="res://Resources/Sprites/failure_screen.png" id="1_fy6mj"]
 [ext_resource type="Script" uid="uid://yomuo86dcd05" path="res://Scripts/failure_screen.gd" id="2_4wx8m"]
 [ext_resource type="Texture2D" uid="uid://q75um6tqswka" path="res://Resources/Sprites/restart_button.png" id="2_fm5f2"]
+[ext_resource type="FontFile" uid="uid://co38hhrnk8cnd" path="res://Resources/Fonts/Minimal5.ttf" id="4_rox4y"]
+[ext_resource type="Script" uid="uid://b3oklirbreml8" path="res://Scripts/score_counter.gd" id="5_gtiup"]
+[ext_resource type="AudioStream" uid="uid://d3h875h6p20qu" path="res://Resources/Audio/game_over 2.wav" id="6_gtiup"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fm5f2"]
 atlas = ExtResource("1_fy6mj")
@@ -28,9 +31,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7qyev")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
-"speed": 1.0
+"speed": 2.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qyev"]
@@ -51,7 +54,15 @@ corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wx8m"]
 bg_color = Color(1, 0.94902, 0.87451, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.94902, 0.87451, 1)
 corner_detail = 1
+
+[sub_resource type="FontVariation" id="FontVariation_yy1vl"]
+base_font = ExtResource("4_rox4y")
 
 [node name="Failure Screen" type="AnimatedSprite2D"]
 position = Vector2(144, 82)
@@ -61,10 +72,10 @@ script = ExtResource("2_4wx8m")
 
 [node name="Button" type="Button" parent="."]
 visible = false
-offset_left = -22.0
+offset_left = -23.0
 offset_top = -1.0
-offset_right = 30.0
-offset_bottom = 16.0
+offset_right = 29.0
+offset_bottom = 18.0
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_7qyev")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rox4y")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fm5f2")
@@ -72,5 +83,29 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gtiup")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4wx8m")
 icon = ExtResource("2_fm5f2")
 
+[node name="Score" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 37.0
+offset_right = 68.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.937255, 0.141176, 0.227451, 1)
+theme_override_fonts/font = ExtResource("4_rox4y")
+text = "Final score"
+
+[node name="ScoreCounter" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 44.0
+offset_right = 68.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0.937255, 0.141176, 0.227451, 1)
+theme_override_fonts/font = SubResource("FontVariation_yy1vl")
+script = ExtResource("5_gtiup")
+
+[node name="Game Over" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_gtiup")
+volume_db = -10.0
+autoplay = true
+
 [connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
+[connection signal="animation_looped" from="." to="." method="_on_animation_looped"]
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

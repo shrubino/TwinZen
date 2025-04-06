@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw8gf5hqnhy8p"]
+
+[ext_resource type="Texture2D" uid="uid://dpnugfx2dtj2d" path="res://Resources/Sprites/peace_safety.png" id="1_jx6u3"]
+[ext_resource type="Script" uid="uid://bt2h0bexk8qpv" path="res://Scripts/peace_reward.gd" id="2_lw8as"]
+
+[node name="PeaceSafety" type="Sprite2D"]
+texture = ExtResource("1_jx6u3")
+script = ExtResource("2_lw8as")

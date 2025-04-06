@@ -17,10 +17,41 @@ extends Node2D
 @onready var brass_player = $Brass
 @onready var drums_player = $Drums
 
+@onready var bass_cue_in = false
+@onready var drums_cue_in = false
+@onready var brass_cue_in = false
+
+
 func _ready():
 	drums_player.stream = drums120
-	#drums_player.play()
-	
+	bass_player.stream = bass120
+	brass_player.stream = brass120
+	drums_player.play()
+
 
 func _on_drums_finished() -> void:
 	drums_player.play()
+	if bass_cue_in == true:
+		bass_player.play()
+	if brass_cue_in == true:
+		brass_player.play()
+
+func switch_to_130():
+	drums_player.stream = drums130
+	bass_player.stream = bass130
+	brass_player.stream = brass130
+	drums_player.play()
+	if bass_cue_in == true:
+		bass_player.play()
+	if brass_cue_in == true:
+		brass_player.play()
+
+func switch_to_140():
+	drums_player.stream = drums140
+	bass_player.stream = bass140
+	brass_player.stream = brass140
+	drums_player.play()
+	if bass_cue_in == true:
+		bass_player.play()
+	if brass_cue_in == true:
+		brass_player.play()

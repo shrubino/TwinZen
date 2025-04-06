@@ -73,23 +73,27 @@ sprite_frames = SubResource("SpriteFrames_g6spl")
 script = ExtResource("2_37yfi")
 
 [node name="W" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("3_37yfi")
 region_enabled = true
 region_rect = Rect2(16, 0, 14, 14)
 
 [node name="A" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-15, 15)
 texture = ExtResource("3_37yfi")
 region_enabled = true
 region_rect = Rect2(1, 15, 14, 14)
 
 [node name="S" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, 15)
 texture = ExtResource("3_37yfi")
 region_enabled = true
 region_rect = Rect2(16, 15, 14, 14)
 
 [node name="D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(15, 15)
 texture = ExtResource("3_37yfi")
 region_enabled = true

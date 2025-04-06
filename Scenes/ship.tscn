@@ -1,7 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bteicrao7jpyl"]
+[gd_scene load_steps=13 format=3 uid="uid://bteicrao7jpyl"]
 
-[ext_resource type="Texture2D" uid="uid://dylik1fdsbj8a" path="res://Resources/Sprites/ship-Sheet.png" id="1_78pfh"]
+[ext_resource type="Texture2D" uid="uid://8b20octx053c" path="res://Resources/Sprites/ship-Sheet.png" id="1_78pfh"]
 [ext_resource type="Script" uid="uid://dq2w0vf4y5b4j" path="res://Scripts/ship.gd" id="2_4qyt1"]
+[ext_resource type="Texture2D" uid="uid://c5vprbeebyp8c" path="res://Resources/Sprites/force_field.png" id="3_xxxu3"]
+[ext_resource type="AudioStream" uid="uid://1jlkdumg2453" path="res://Resources/Audio/ship_dodge 120.wav" id="4_6ejuo"]
+[ext_resource type="AudioStream" uid="uid://0h1ia7s3hu3a" path="res://Resources/Audio/ship_collision.wav" id="5_8aq7e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qyt1"]
 atlas = ExtResource("1_78pfh")
@@ -60,5 +63,18 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_4qyt1")
+
+[node name="Force Field" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 1)
+texture = ExtResource("3_xxxu3")
+
+[node name="Dodge Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6ejuo")
+volume_db = -12.0
+
+[node name="Collision Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_8aq7e")
+volume_db = -11.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -36,6 +36,12 @@ extends AnimatedSprite2D
 @onready var east_wind = $"../MonkWindEast"
 @onready var west_wind = $"../MonkWindWest"
 
+@onready var peace_bonus = $"../PeaceSafety"
+@onready var ship =  $"../Ship"
+
+@onready var music_controller = $"../MusicController"
+@onready var progress_bar = $"../Progress bar"
+
 func _ready():
 	sun.position = sun_positions[sun_index]
 
@@ -46,6 +52,7 @@ func _ready():
 	
 func _process(delta):
 	if tutorial_ended == true:
+		
 		if Input.is_action_pressed("monk_w"):
 			velocity.y -= breath_speed * delta 
 		if Input.is_action_pressed("monk_s"):
@@ -85,13 +92,20 @@ func start_peace_timer():
 	if is_at_peace:
 		await get_tree().create_timer(peace_increase_rate).timeout
 		peace_bar.value += 1
+		Globals.peace += 1
 		Globals.score += 10
+		print(peace_bar.value)
+		if peace_bar.value >= 99:
+			trigger_peace_bonus()
+			peace_bar.value -= 50
 	else:
 		await get_tree().create_timer(peace_decrease_rate).timeout
 		peace_bar.value -= 1
+		Globals.disturbance += 1
 	start_peace_timer()
 	
-func start_timer():
+	
+func start_timer(): #this is all widly complicated now...
 	for x in measures.size():
 		for y in measures[x]:
 			await get_tree().create_timer(time_for_asteroids).timeout
@@ -117,6 +131,13 @@ func advance_sun():
 		sun_index += 1
 		
 	sun_index = clamp(sun_index, 0, sun_positions.size() - 1)
+
+func trigger_peace_bonus():
+	peace_bonus.visible = true
+	ship.enable_force_field(8)
+	ship.hull_bar.value += 11
+	await get_tree().create_timer(6).timeout
+	peace_bonus.visible = false
 
 func _on_animation_looped() -> void:
 	flip_h = randi_range(0,1)
