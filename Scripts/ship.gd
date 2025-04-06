@@ -21,6 +21,8 @@ extends Node2D
 @onready var dodge_file_130 = preload("res://Resources/Audio/ship_dodge_130.wav")
 @onready var dodge_file_140 = preload("res://Resources/Audio/ship_dodge_140.wav")
 
+@onready var progress_bar = $"../Progress bar"
+
 func _ready() -> void:
 	center_position = global_position.x
 	left_position = center_position - 50.0
@@ -57,6 +59,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if force_field_active != true:
 		collision_sound.play()
 		hull_bar.value -= 10
+		progress_bar.mini_ship.position.x += 1
 		if hull_bar.value <= 0:
 			its_all_over()
 	

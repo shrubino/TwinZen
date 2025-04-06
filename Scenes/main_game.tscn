@@ -267,18 +267,16 @@ script = ExtResource("13_sftma")
 
 [node name="MusicController" parent="." instance=ExtResource("13_c78sm")]
 
+[node name="Progress bar" parent="." instance=ExtResource("20_ry2jr")]
+position = Vector2(144, 9)
+
 [node name="LeftTutorial" parent="." instance=ExtResource("16_vc13p")]
-visible = false
 position = Vector2(72, 81)
 
 [node name="RightTutorial" parent="." instance=ExtResource("17_gpk8t")]
-visible = false
 position = Vector2(216, 81)
 
 [node name="PeaceSafety" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(74, 18)
 texture = ExtResource("19_hm1wn")
-
-[node name="Progress bar" parent="." instance=ExtResource("20_ry2jr")]
-position = Vector2(144, 9)

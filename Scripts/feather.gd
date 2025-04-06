@@ -52,7 +52,6 @@ func _ready():
 	
 func _process(delta):
 	if tutorial_ended == true:
-		
 		if Input.is_action_pressed("monk_w"):
 			velocity.y -= breath_speed * delta 
 		if Input.is_action_pressed("monk_s"):
@@ -92,6 +91,7 @@ func start_peace_timer():
 	if is_at_peace:
 		await get_tree().create_timer(peace_increase_rate).timeout
 		peace_bar.value += 1
+		progress_bar.monk_head.position.x += 1
 		Globals.peace += 1
 		Globals.score += 10
 		print(peace_bar.value)
@@ -145,7 +145,10 @@ func _on_animation_looped() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	is_at_peace = true
 	monk.play("default")
+	progress_bar.monk_arrow.visible = true
+
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	is_at_peace = false
 	monk.play("disturbed")
+	progress_bar.monk_arrow.visible = false

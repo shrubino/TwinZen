@@ -11,3 +11,6 @@ res://Scripts/ship.gd
 res://Scripts/score_counter.gd
 res://Scripts/music_controller.gd
 res://Scripts/globals.gd
+res://Scenes/progress_bar.tscn
+res://Scenes/progress_bar.gd
+res://Scenes/win_screen.tscn

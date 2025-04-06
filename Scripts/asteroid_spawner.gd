@@ -19,6 +19,9 @@ extends Node2D
 @onready var bpm_140_timer = 45
 @onready var ship = $"../Ship"
 
+@onready var progress_bar = $"../Progress bar"
+
+
 func _ready():
 	start_timer()
 	await get_tree().create_timer(tutorial_timer).timeout
@@ -38,6 +41,8 @@ func start_timer():
 		await get_tree().create_timer(time_for_asteroids).timeout
 		#asteroid_bloop.play() #bloop
 		spawn_asteroid()
+		if tutorial_ended == true:
+			progress_bar.mini_ship.position.x -= 1
 	start_timer()
 
 func spawn_asteroid(): #This is a Claude output, but I can rewrite it if you want to avoid needing any LLM disclosures!
