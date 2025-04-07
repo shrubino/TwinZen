@@ -17,4 +17,5 @@ func _process(delta):
 		you_win_the_game()
 
 func you_win_the_game():
+	Globals.score += 1000
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/win_screen.tscn")

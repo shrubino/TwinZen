@@ -73,8 +73,8 @@ func spawn_asteroid():
 				unoccupied_offsets.erase(first_offset)
 				second_offset = unoccupied_offsets.pick_random()
 				
-				second_asteroid.position.x += (positioning * second_offset)
-				get_parent().add_child(second_asteroid)
+			second_asteroid.position.x += (positioning * second_offset)
+			get_parent().add_child(second_asteroid)
 
 func switch_to_130():
 	Globals.bpm = 130

@@ -1,12 +1,166 @@
-[gd_scene load_steps=3 format=3 uid="uid://cncf08epbo7td"]
+[gd_scene load_steps=24 format=3 uid="uid://cncf08epbo7td"]
 
 [ext_resource type="Texture2D" uid="uid://dxwo0fa5vu2uv" path="res://Resources/Sprites/win_screen.png" id="1_l5sol"]
 [ext_resource type="AudioStream" uid="uid://db548ygowoif5" path="res://Resources/Audio/win_screen_fanfare.wav" id="2_a00f1"]
+[ext_resource type="Script" uid="uid://d2n4txxey8021" path="res://Scripts/win_screen.gd" id="2_awi1s"]
+[ext_resource type="Texture2D" uid="uid://q75um6tqswka" path="res://Resources/Sprites/restart_button.png" id="4_bwc64"]
+[ext_resource type="FontFile" uid="uid://co38hhrnk8cnd" path="res://Resources/Fonts/Minimal5.ttf" id="5_mf36t"]
+[ext_resource type="Script" uid="uid://b3oklirbreml8" path="res://Scripts/score_counter.gd" id="6_pq638"]
 
-[node name="Win Screen" type="Sprite2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a00f1"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(0, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awi1s"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(288, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwc64"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(576, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85imr"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(864, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf36t"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(1152, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq638"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(1440, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8snof"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(1728, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rjdi"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(2016, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ufe8"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(2304, 0, 288, 162)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xl6h"]
+atlas = ExtResource("1_l5sol")
+region = Rect2(2592, 0, 288, 162)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qrg8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a00f1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awi1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwc64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85imr")
+}],
+"loop": false,
+"name": &"1st",
+"speed": 0.65
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf36t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq638")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8snof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rjdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ufe8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xl6h")
+}],
+"loop": false,
+"name": &"2nd",
+"speed": 0.75
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85imr"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mf36t"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq638"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8snof"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rjdi"]
+bg_color = Color(1, 0.94902, 0.87451, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.94902, 0.87451, 1)
+corner_detail = 1
+
+[sub_resource type="FontVariation" id="FontVariation_8snof"]
+base_font = ExtResource("5_mf36t")
+
+[node name="Win Screen" type="AnimatedSprite2D"]
 position = Vector2(144, 81)
-texture = ExtResource("1_l5sol")
+sprite_frames = SubResource("SpriteFrames_qrg8t")
+animation = &"2nd"
+autoplay = "1st"
+script = ExtResource("2_awi1s")
 
 [node name="Fanfare" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_a00f1")
 autoplay = true
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = -23.0
+offset_top = 57.0
+offset_right = 29.0
+offset_bottom = 76.0
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_85imr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mf36t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pq638")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8snof")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1rjdi")
+icon = ExtResource("4_bwc64")
+
+[node name="Score" type="Label" parent="."]
+visible = false
+offset_left = -110.0
+offset_top = 42.0
+offset_right = -68.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.937255, 0.141176, 0.227451, 1)
+theme_override_fonts/font = ExtResource("5_mf36t")
+text = "Final score"
+
+[node name="ScoreCounter" type="Label" parent="."]
+visible = false
+offset_left = -110.0
+offset_top = 49.0
+offset_right = -70.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.937255, 0.141176, 0.227451, 1)
+theme_override_fonts/font = SubResource("FontVariation_8snof")
+script = ExtResource("6_pq638")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

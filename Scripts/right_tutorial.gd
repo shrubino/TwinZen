@@ -15,9 +15,7 @@ extends AnimatedSprite2D
 
 func _ready():
 	await get_tree().create_timer(tutorial_time).timeout
-	W.visible = true
 	A.visible = true
-	S.visible = true
 	D.visible = true
 	play()
 
