@@ -1,8 +1,3 @@
-res://Scenes/main_game.tscn
-res://Scenes/win_screen.tscn
 res://Scenes/asteroid.tscn
-res://Scenes/failure_screen.tscn
-res://Scripts/asteroid_spawner.gd
-res://Scenes/right_tutorial.tscn
-res://Scripts/right_tutorial.gd
-res://Scripts/win_screen.gd
+res://Scenes/main_game.tscn
+res://Scenes/progress_bar.tscn

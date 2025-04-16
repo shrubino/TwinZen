@@ -1,22 +1,22 @@
 [gd_scene load_steps=33 format=3 uid="uid://b3ty2k2smxfdj"]
 
-[ext_resource type="Texture2D" uid="uid://cmd4xjo6pnvna" path="res://Resources/Sprites/bg_sheet.png" id="2_6y7pd"]
+[ext_resource type="Texture2D" uid="uid://2v4xn8yo6jf6" path="res://Resources/Sprites/bg_sheet.png" id="2_6y7pd"]
 [ext_resource type="Script" uid="uid://5cxyhb7o508a" path="res://Scripts/asteroid_spawner.gd" id="2_pu3va"]
-[ext_resource type="AudioStream" uid="uid://ci66xgtbqnh7r" path="res://Resources/Audio/SpaceMetronome.wav" id="3_0e3vx"]
 [ext_resource type="PackedScene" uid="uid://bteicrao7jpyl" path="res://Scenes/ship.tscn" id="4_6j5ir"]
 [ext_resource type="PackedScene" uid="uid://c1j8on5bp3nlm" path="res://Scenes/monk.tscn" id="5_mgc0q"]
 [ext_resource type="PackedScene" uid="uid://cpqjtrxselwdf" path="res://Scenes/bubble1.tscn" id="6_6y7pd"]
-[ext_resource type="Texture2D" uid="uid://cgrhkox423lcd" path="res://Resources/Sprites/sun.png" id="6_tpqse"]
+[ext_resource type="Texture2D" uid="uid://c25ob8tf42l2j" path="res://Resources/Sprites/sun.png" id="6_tpqse"]
 [ext_resource type="PackedScene" uid="uid://bm2lhyl675dly" path="res://Scenes/bubble2.tscn" id="7_73nn6"]
 [ext_resource type="PackedScene" uid="uid://dujinn525ybqy" path="res://Scenes/feather.tscn" id="9_73nn6"]
-[ext_resource type="Texture2D" uid="uid://dhcw5e8fq4pi1" path="res://Resources/Sprites/Peacebar.png" id="9_r0mdn"]
+[ext_resource type="Texture2D" uid="uid://dn428m1g3ykag" path="res://Resources/Sprites/Peacebar.png" id="9_r0mdn"]
 [ext_resource type="FontFile" uid="uid://co38hhrnk8cnd" path="res://Resources/Fonts/Minimal5.ttf" id="10_0xqxu"]
-[ext_resource type="Texture2D" uid="uid://djr83y4ikkbfm" path="res://Resources/Sprites/Hullbar.png" id="11_tpqse"]
+[ext_resource type="Texture2D" uid="uid://3a02kvpgssl1" path="res://Resources/Sprites/Hullbar.png" id="11_tpqse"]
+[ext_resource type="Texture2D" uid="uid://bv1btabiqbfoq" path="res://Resources/Sprites/warning.png" id="12_hm1wn"]
 [ext_resource type="PackedScene" uid="uid://bffjq71t503i0" path="res://Scenes/music_controller.tscn" id="13_c78sm"]
 [ext_resource type="Script" uid="uid://b3oklirbreml8" path="res://Scripts/score_counter.gd" id="13_sftma"]
 [ext_resource type="PackedScene" uid="uid://baljdbkwvecr0" path="res://Scenes/left_tutorial.tscn" id="16_vc13p"]
 [ext_resource type="PackedScene" uid="uid://2w6fvrq75qqb" path="res://Scenes/right_tutorial.tscn" id="17_gpk8t"]
-[ext_resource type="Texture2D" uid="uid://dpnugfx2dtj2d" path="res://Resources/Sprites/peace_safety.png" id="19_hm1wn"]
+[ext_resource type="Texture2D" uid="uid://ds5ucn4x16uwl" path="res://Resources/Sprites/peace_safety.png" id="19_hm1wn"]
 [ext_resource type="PackedScene" uid="uid://b0vcaq288hohb" path="res://Scenes/progress_bar.tscn" id="20_ry2jr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73nn6"]
@@ -99,10 +99,8 @@ frame_progress = 0.673186
 centered = false
 
 [node name="SpaceMetronome" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_0e3vx")
 
 [node name="AsteroidBloop" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_0e3vx")
 pitch_scale = 0.47
 
 [node name="Ship" parent="." instance=ExtResource("4_6j5ir")]
@@ -213,6 +211,11 @@ text = "Peace"
 autowrap_mode = 1
 justification_flags = 0
 visible_characters_behavior = 2
+
+[node name="Warning" type="Sprite2D" parent="PeacebarContainer"]
+visible = false
+position = Vector2(0, -25)
+texture = ExtResource("12_hm1wn")
 
 [node name="HullContainer" type="Sprite2D" parent="."]
 position = Vector2(158, 142)

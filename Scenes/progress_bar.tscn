@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0vcaq288hohb"]
+[gd_scene load_steps=7 format=3 uid="uid://b0vcaq288hohb"]
 
-[ext_resource type="Texture2D" uid="uid://cyxept35lsoff" path="res://Resources/Sprites/progress_bar.png" id="1_o7840"]
-[ext_resource type="Script" uid="uid://brxou5lwho06e" path="res://Scenes/progress_bar.gd" id="2_2qvtr"]
-[ext_resource type="Texture2D" uid="uid://bxkiprkbs25cn" path="res://Resources/Sprites/monk_head.png" id="2_nsm2x"]
-[ext_resource type="Texture2D" uid="uid://ckf7lwvxspy8q" path="res://Resources/Sprites/monk_arrow.png" id="3_2qvtr"]
-[ext_resource type="Texture2D" uid="uid://cqgbiuo1wfx2y" path="res://Resources/Sprites/mini_ship.png" id="4_tels7"]
-[ext_resource type="Texture2D" uid="uid://cqut7n2762nhx" path="res://Resources/Sprites/ship_arrow.png" id="5_axgih"]
-[ext_resource type="Texture2D" uid="uid://dm0mbe3lhutcr" path="res://Resources/Sprites/exclamation_mark.png" id="6_sucpa"]
+[ext_resource type="Texture2D" uid="uid://hue4na6koecg" path="res://Resources/Sprites/progress_bar.png" id="1_o7840"]
+[ext_resource type="Script" uid="uid://brxou5lwho06e" path="res://Scripts/progress_bar.gd" id="2_2qvtr"]
+[ext_resource type="Texture2D" uid="uid://cw0o3dhxxhdv2" path="res://Resources/Sprites/monk_head.png" id="2_nsm2x"]
+[ext_resource type="Texture2D" uid="uid://dumnuyxl7hiqx" path="res://Resources/Sprites/monk_arrow.png" id="3_2qvtr"]
+[ext_resource type="Texture2D" uid="uid://qt64cyejfcxk" path="res://Resources/Sprites/mini_ship.png" id="4_tels7"]
+[ext_resource type="Texture2D" uid="uid://v5kpre1uptg1" path="res://Resources/Sprites/ship_arrow.png" id="5_axgih"]
 
 [node name="Progress bar" type="Sprite2D"]
 texture = ExtResource("1_o7840")
@@ -27,11 +26,3 @@ texture = ExtResource("4_tels7")
 [node name="Ship Arrow" type="Sprite2D" parent="MiniShip"]
 position = Vector2(-6, -4)
 texture = ExtResource("5_axgih")
-
-[node name="ExclamationMark" type="Sprite2D" parent="."]
-position = Vector2(33, -4)
-texture = ExtResource("6_sucpa")
-
-[node name="ExclamationMark2" type="Sprite2D" parent="."]
-position = Vector2(79, -4)
-texture = ExtResource("6_sucpa")

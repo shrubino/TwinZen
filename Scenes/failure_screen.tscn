@@ -1,11 +1,11 @@
 [gd_scene load_steps=17 format=3 uid="uid://dhx2qwwueuvxu"]
 
-[ext_resource type="Texture2D" uid="uid://c3t5ei2t46h8v" path="res://Resources/Sprites/failure_screen.png" id="1_fy6mj"]
+[ext_resource type="Texture2D" uid="uid://dtxot57c6e2io" path="res://Resources/Sprites/failure_screen.png" id="1_fy6mj"]
 [ext_resource type="Script" uid="uid://yomuo86dcd05" path="res://Scripts/failure_screen.gd" id="2_4wx8m"]
-[ext_resource type="Texture2D" uid="uid://q75um6tqswka" path="res://Resources/Sprites/restart_button.png" id="2_fm5f2"]
+[ext_resource type="Texture2D" uid="uid://cnrn0qsb3ujft" path="res://Resources/Sprites/restart_button.png" id="2_fm5f2"]
 [ext_resource type="FontFile" uid="uid://co38hhrnk8cnd" path="res://Resources/Fonts/Minimal5.ttf" id="4_rox4y"]
 [ext_resource type="Script" uid="uid://b3oklirbreml8" path="res://Scripts/score_counter.gd" id="5_gtiup"]
-[ext_resource type="AudioStream" uid="uid://d3h875h6p20qu" path="res://Resources/Audio/game_over 2.wav" id="6_gtiup"]
+[ext_resource type="AudioStream" uid="uid://bbp2bfxvywvee" path="res://Resources/Audio/game_over 2.wav" id="6_gtiup"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fm5f2"]
 atlas = ExtResource("1_fy6mj")

@@ -38,6 +38,7 @@ extends AnimatedSprite2D
 
 @onready var peace_bonus = $"../PeaceSafety"
 @onready var ship =  $"../Ship"
+@onready var warning = $"../PeacebarContainer/Warning"
 
 @onready var music_controller = $"../MusicController"
 @onready var progress_bar = $"../Progress bar"
@@ -100,8 +101,14 @@ func start_peace_timer():
 			peace_bar.value -= 50
 	else:
 		await get_tree().create_timer(peace_decrease_rate).timeout
-		peace_bar.value -= 1
+		peace_bar.value -= 2
 		Globals.disturbance += 1
+		if peace_bar.value <= 15:
+			warning.visible = true
+			if peace_bar.value <= 1:
+				its_all_over()
+		else:
+			warning.visible = false
 	start_peace_timer()
 	
 	
@@ -146,6 +153,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	is_at_peace = true
 	monk.play("default")
 	progress_bar.monk_arrow.visible = true
+
+func its_all_over():
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/failure_screen.tscn")
+
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:

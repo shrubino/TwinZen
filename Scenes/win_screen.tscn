@@ -1,9 +1,9 @@
 [gd_scene load_steps=24 format=3 uid="uid://cncf08epbo7td"]
 
-[ext_resource type="Texture2D" uid="uid://dxwo0fa5vu2uv" path="res://Resources/Sprites/win_screen.png" id="1_l5sol"]
-[ext_resource type="AudioStream" uid="uid://db548ygowoif5" path="res://Resources/Audio/win_screen_fanfare.wav" id="2_a00f1"]
+[ext_resource type="Texture2D" uid="uid://xtfuqd1m4t5d" path="res://Resources/Sprites/win_screen.png" id="1_l5sol"]
+[ext_resource type="AudioStream" uid="uid://dy7u6v6h3dxce" path="res://Resources/Audio/win_screen_fanfare.wav" id="2_a00f1"]
 [ext_resource type="Script" uid="uid://d2n4txxey8021" path="res://Scripts/win_screen.gd" id="2_awi1s"]
-[ext_resource type="Texture2D" uid="uid://q75um6tqswka" path="res://Resources/Sprites/restart_button.png" id="4_bwc64"]
+[ext_resource type="Texture2D" uid="uid://cnrn0qsb3ujft" path="res://Resources/Sprites/restart_button.png" id="4_bwc64"]
 [ext_resource type="FontFile" uid="uid://co38hhrnk8cnd" path="res://Resources/Fonts/Minimal5.ttf" id="5_mf36t"]
 [ext_resource type="Script" uid="uid://b3oklirbreml8" path="res://Scripts/score_counter.gd" id="6_pq638"]
 

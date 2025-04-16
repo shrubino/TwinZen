@@ -34,7 +34,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var x_input = Input.get_axis("ship_left", "ship_right")
 	if abs(x_input) > 0:
-		dodge_sound.play()
+		if Input.is_action_just_pressed("ship_left") or Input.is_action_just_pressed("ship_right"):
+			dodge_sound.play()
 	if !is_moving:
 		if x_input < 0:  # Left pressed
 			target_position = left_position
@@ -78,4 +79,5 @@ func check_bpm():
 	if Globals.bpm == 130:
 		dodge_sound.stream = dodge_file_130
 	if Globals.bpm == 140:
+		return_delay = 0.35
 		dodge_sound.stream = dodge_file_140
