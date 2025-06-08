@@ -20,7 +20,9 @@ Globals="*res://Scripts/globals.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/size/viewport_width=288
+window/size/viewport_height=164
+window/stretch/mode="canvas_items"
 
 [input]
 
